@@ -1,0 +1,165 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.input.*?>
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.paint.*?>
+<?import javafx.scene.shape.*?>
+<?import javafx.scene.image.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" minHeight="-Infinity" prefHeight="603.0" prefWidth="359.0" style="-fx-background-color: #3c3c3c;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="hotspot.HotspotController">
+    <children>
+      <Line endX="100.0" layoutX="187.0" layoutY="90.0" startX="-100.0">
+         <stroke>
+            <LinearGradient endX="1.0" endY="1.0">
+               <stops>
+                  <Stop color="WHITE" />
+                  <Stop color="WHITE" offset="0.007662835249042145" />
+                  <Stop color="#aeaeae" offset="0.5402298850574713" />
+                  <Stop color="WHITE" offset="1.0" />
+               </stops>
+            </LinearGradient>
+         </stroke>
+      </Line>
+      <MenuBar prefHeight="25.0" prefWidth="280.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
+        <menus>
+          <Menu mnemonicParsing="false" text="File">
+            <items>
+                  <MenuItem fx:id="save" mnemonicParsing="false" text="Save">
+                     <accelerator>
+                        <KeyCodeCombination alt="UP" code="S" control="DOWN" meta="UP" shift="UP" shortcut="UP" />
+                     </accelerator></MenuItem>
+                  <SeparatorMenuItem mnemonicParsing="false" />
+                  <CheckMenuItem fx:id="autostart" mnemonicParsing="false" onAction="#autostart" text="Autostart" />
+                  <SeparatorMenuItem mnemonicParsing="false" />
+              <MenuItem fx:id="close" mnemonicParsing="false" text="Close">
+                     <accelerator>
+                        <KeyCodeCombination alt="DOWN" code="F4" control="UP" meta="UP" shift="UP" shortcut="UP" />
+                     </accelerator></MenuItem>
+            </items>
+               <accelerator>
+                  <KeyCodeCombination alt="DOWN" code="F" control="UP" meta="UP" shift="UP" shortcut="UP" />
+               </accelerator>
+          </Menu>
+            <Menu fx:id="display" mnemonicParsing="false" text="View">
+               <items>
+                  <MenuItem fx:id="interfaces" mnemonicParsing="false" text="Interfaces">
+                     <accelerator>
+                        <KeyCodeCombination alt="UP" code="I" control="DOWN" meta="UP" shift="UP" shortcut="UP" />
+                     </accelerator></MenuItem>
+                  <MenuItem fx:id="drivers" mnemonicParsing="false" text="Drivers">
+                     <accelerator>
+                        <KeyCodeCombination alt="UP" code="D" control="DOWN" meta="UP" shift="UP" shortcut="UP" />
+                     </accelerator></MenuItem>
+                  <MenuItem fx:id="networks" mnemonicParsing="false" text="Networks">
+                     <accelerator>
+                        <KeyCodeCombination alt="UP" code="N" control="DOWN" meta="UP" shift="UP" shortcut="UP" />
+                     </accelerator></MenuItem>
+                  <MenuItem fx:id="profiles" mnemonicParsing="false" text="Profiles">
+                     <accelerator>
+                        <KeyCodeCombination alt="UP" code="P" control="DOWN" meta="UP" shift="UP" shortcut="UP" />
+                     </accelerator></MenuItem>
+                  <MenuItem fx:id="status" mnemonicParsing="false" text="Status">
+                     <accelerator>
+                        <KeyCodeCombination alt="UP" code="S" control="DOWN" meta="UP" shift="UP" shortcut="UP" />
+                     </accelerator></MenuItem>
+                  <MenuItem fx:id="security" mnemonicParsing="false" text="Security">
+                     <accelerator>
+                        <KeyCodeCombination alt="UP" code="E" control="DOWN" meta="UP" shift="UP" shortcut="UP" />
+                     </accelerator></MenuItem>
+                  <MenuItem fx:id="clients" mnemonicParsing="false" text="Clients">
+                     <accelerator>
+                        <KeyCodeCombination alt="UP" code="C" control="DOWN" meta="UP" shift="UP" shortcut="UP" />
+                     </accelerator></MenuItem>
+                  <MenuItem fx:id="moreInfo" mnemonicParsing="false" text="More Info">
+                     <accelerator>
+                        <KeyCodeCombination alt="UP" code="M" control="DOWN" meta="UP" shift="UP" shortcut="UP" />
+                     </accelerator></MenuItem>
+                  <SeparatorMenuItem mnemonicParsing="false" />
+                  <CheckMenuItem fx:id="setIP" mnemonicParsing="false" text="Set WLAN IP">
+                     <accelerator>
+                        <KeyCodeCombination alt="UP" code="W" control="DOWN" meta="UP" shift="UP" shortcut="UP" />
+                     </accelerator></CheckMenuItem>
+               </items>
+            </Menu>
+          <Menu mnemonicParsing="false" text="Help">
+            <items>
+              <MenuItem fx:id="about" mnemonicParsing="false" text="About">
+                     <accelerator>
+                        <KeyCodeCombination alt="UP" code="A" control="DOWN" meta="UP" shift="DOWN" shortcut="UP" />
+                     </accelerator></MenuItem>
+                  <MenuItem fx:id="faq" mnemonicParsing="false" onAction="#faq" text="FAQ" />
+                  <MenuItem fx:id="help" mnemonicParsing="false" onAction="#help" text="Help">
+                     <accelerator>
+                        <KeyCodeCombination alt="DOWN" code="F1" control="UP" meta="UP" shift="UP" shortcut="UP" />
+                     </accelerator></MenuItem>
+            </items>
+          </Menu>
+        </menus>
+      </MenuBar>
+      <TextField fx:id="networkName" layoutX="87.0" layoutY="112.0" prefHeight="35.0" prefWidth="241.0" promptText="Network Name" style="-fx-font-size: 15;" AnchorPane.leftAnchor="87.0" AnchorPane.rightAnchor="31.0">
+         <tooltip>
+            <Tooltip text="Type a network name here (3 char min)" />
+         </tooltip></TextField>
+      <PasswordField fx:id="password" layoutX="17.0" layoutY="153.0" prefHeight="35.0" prefWidth="241.0" promptText="Password" style="-fx-font-size: 15;" AnchorPane.leftAnchor="87.0" AnchorPane.rightAnchor="31.0">
+         <tooltip>
+            <Tooltip text="Type the password here (8 char min)" />
+         </tooltip></PasswordField>
+      <ToggleButton fx:id="start" layoutX="87.0" layoutY="203.0" mnemonicParsing="false" onAction="#start" prefHeight="33.0" prefWidth="241.0" style="-fx-background-color: #3c3c3c; -fx-border-color: #FFFFFF; -fx-font-size: 16; -fx-font-weight: Bold;" text="Start" textFill="WHITE" AnchorPane.leftAnchor="87.0" AnchorPane.rightAnchor="31.0">
+         <font>
+            <Font name="System Italic" size="14.0" />
+         </font>
+         <tooltip>
+            <Tooltip text="Click here to create the network" />
+         </tooltip>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </ToggleButton>
+      <TextArea fx:id="activity" editable="false" layoutX="15.0" layoutY="255.0" prefHeight="285.0" prefWidth="317.0" style="-fx-font-size: 13; -fx-font-family: Consolas;" AnchorPane.bottomAnchor="63.0" AnchorPane.leftAnchor="15.0" AnchorPane.rightAnchor="27.0" AnchorPane.topAnchor="255.0" />
+      <Circle fill="WHITE" layoutX="43.0" layoutY="576.0" radius="16.0" strokeType="INSIDE" AnchorPane.bottomAnchor="11.0" AnchorPane.leftAnchor="27.0">
+         <stroke>
+            <RadialGradient centerX="0.38888888888888895" centerY="0.8095238095238095" radius="0.5">
+               <stops>
+                  <Stop color="BLACK" />
+                  <Stop color="WHITE" offset="1.0" />
+               </stops>
+            </RadialGradient>
+         </stroke>
+      </Circle>
+      <ImageView fx:id="tweet" fitHeight="25.0" fitWidth="26.0" layoutX="30.0" layoutY="564.0" AnchorPane.bottomAnchor="14.0" AnchorPane.leftAnchor="30.0">
+         <image>
+            <Image url="@1326368859_twitter.png" />
+         </image>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </ImageView>
+      <ProgressIndicator fx:id="progress" layoutX="173.0" layoutY="557.0" prefHeight="39.0" prefWidth="43.0" visible="false" AnchorPane.bottomAnchor="7.0" />
+      <RadioButton fx:id="onOff" layoutX="290.0" layoutY="568.0" mnemonicParsing="false" text="OFF" textFill="#f4f1f1" AnchorPane.bottomAnchor="18.0" AnchorPane.rightAnchor="26.0">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font></RadioButton>
+      <Label fx:id="errorLabel" layoutX="86.0" layoutY="93.0" prefHeight="17.0" prefWidth="234.0" textFill="WHITE" AnchorPane.leftAnchor="86.0" AnchorPane.rightAnchor="39.0">
+         <effect>
+            <Lighting>
+               <bumpInput>
+                  <Shadow />
+               </bumpInput>
+            </Lighting>
+         </effect>
+      </Label>
+      <Label layoutX="13.0" layoutY="120.0" style="-fx-font-size: 14; -fx-font-weight: Bold;" text="Network:" textFill="#f4f1f1" />
+      <Label layoutX="14.0" layoutY="161.0" style="-fx-font-size: 14; -fx-font-weight: Bold;" text="Password:" textFill="#f4f1f1" />
+      <ImageView fitHeight="70.0" fitWidth="200.0" layoutX="82.0" layoutY="35.0">
+         <image>
+            <Image url="@coldspot_type.png" />
+         </image>
+      </ImageView>
+    </children>
+</AnchorPane>

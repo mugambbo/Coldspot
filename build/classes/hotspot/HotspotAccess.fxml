@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.*?>
+<?import javafx.scene.paint.*?>
+<?import javafx.scene.shape.*?>
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.image.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane prefHeight="381.0" prefWidth="305.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="hotspot.HotspotAccessController">
+   <children>
+      <ImageView fitHeight="393.0" fitWidth="330.0">
+         <image>
+            <Image url="@background-list.png" />
+         </image>
+      </ImageView>
+      <AnchorPane prefHeight="393.0" prefWidth="330.0">
+         <children>
+            <Rectangle arcHeight="20.0" arcWidth="20.0" fill="WHITE" height="232.0" layoutX="14.0" layoutY="14.0" strokeType="INSIDE" width="306.0">
+               <stroke>
+                  <LinearGradient endX="1.0" endY="1.0">
+                     <stops>
+                        <Stop color="#ee3333" />
+                        <Stop color="#ffe3e3" offset="0.31615120274914055" />
+                        <Stop color="#ffe4e4" offset="0.7427025318955642" />
+                        <Stop color="RED" offset="1.0" />
+                     </stops>
+                  </LinearGradient>
+               </stroke>
+            </Rectangle>
+            <Text layoutX="21.0" layoutY="39.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Thank you for obtaining a copy of Coldspot." />
+            <Text fx:id="activationCode" fill="#ff7f00" layoutX="22.0" layoutY="265.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Activation Code:" wrappingWidth="282.0">
+               <effect>
+                  <Reflection fraction="0.69" />
+               </effect>
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </Text>
+            <Text layoutX="21.0" layoutY="75.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Coldspot was designed from the ground up to provide for up to a 100 clients, a platform whereby your PC becomes a wireless router providing local &amp; internet access to Windows OS (Windows 8) and other handheld devices (including Android, Windows Phone and Blackberry smartphones). By the way, its FREE. However, to unlock it, simply contact us via email - mugambbo@gmail.com, or send us a tweet - @Mugambbo; containing your name and the activation code below and we will provide you with the activation key in no time:" textAlignment="JUSTIFY" wrappingWidth="288.294921875" />
+            <TextField fx:id="keyCode" layoutX="22.0" layoutY="287.0" prefHeight="25.0" prefWidth="282.0" promptText="Key Goes Here" />
+            <Button fx:id="activateBtn" layoutX="21.0" layoutY="327.0" mnemonicParsing="false" style="-fx-background-color: green;" text="Activate" textFill="WHITE">
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor></Button>
+            <ImageView fitHeight="29.0" fitWidth="88.0" layoutX="235.0" layoutY="338.0">
+               <image>
+                  <Image url="@coldspot_logo.png" />
+               </image>
+               <effect>
+                  <Reflection />
+               </effect>
+            </ImageView>
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>

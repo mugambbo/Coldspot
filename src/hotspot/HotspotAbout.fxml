@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.*?>
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.image.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane prefHeight="429.0" prefWidth="319.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="hotspot.HotspotAboutController">
+   <children>
+      <Text layoutX="27.0" layoutY="360.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Your feedback is much appreciated:" wrappingWidth="269.13671875">
+         <font>
+            <Font name="System Italic" size="12.0" />
+         </font>
+      </Text>
+      <Text layoutX="40.0" layoutY="126.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Works with Windows and Android devices">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </Text>
+      <Text layoutX="40.0" layoutY="108.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Turns your  PC into a wireless hotspot">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </Text>
+      <Text fill="#006699" layoutX="27.0" layoutY="78.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Version: 1.1">
+         <font>
+            <Font name="System Bold Italic" size="12.0" />
+         </font>
+      </Text>
+      <Accordion layoutX="38.0" layoutY="146.0" prefHeight="195.0" prefWidth="253.0">
+         <panes>
+            <TitledPane text="APCL (Designer/Developer)">
+               <content>
+                  <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" style="-fx-background-color: white;">
+                     <children>
+                        <ImageView fitHeight="32.0" fitWidth="32.0" layoutX="6.0" layoutY="11.0">
+                           <image>
+                              <Image url="@apcl_logo.png" />
+                           </image>
+                        </ImageView>
+                        <Text layoutX="43.0" layoutY="17.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Aesthetic Project Concept Limited is a brain child of professionals from different works of life. We provide top-notch ICT solutions. mugambbo @gmail.com" textAlignment="JUSTIFY" wrappingWidth="201.13671875">
+                           <font>
+                              <Font name="System Italic" size="12.0" />
+                           </font>
+                        </Text>
+                     </children>
+                  </AnchorPane>
+               </content>
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </TitledPane>
+            <TitledPane text="Tushed Trends (Contributor)">
+               <content>
+                  <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" style="-fx-background-color: white;">
+                     <children>
+                        <ImageView layoutX="6.0" layoutY="5.0">
+                           <image>
+                              <Image url="@tushedtrends.png" />
+                           </image>
+                        </ImageView>
+                        <Text layoutX="57.0" layoutY="17.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Been initially a fashion outfit with a huge online presence turned 360 degrees to become a multiversatile ICT firm with grand ideas.  tushedtrends.blogspot.com" textAlignment="JUSTIFY" wrappingWidth="191.1328125">
+                           <font>
+                              <Font name="System Italic" size="12.0" />
+                           </font>
+                        </Text>
+                     </children>
+                  </AnchorPane>
+               </content>
+            </TitledPane>
+            <TitledPane text="Vinyx Concepts (Contributor)">
+               <content>
+                  <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" style="-fx-background-color: white;">
+                     <children>
+                        <ImageView layoutX="6.0" layoutY="5.0">
+                           <image>
+                              <Image url="@VCLogo.png" />
+                           </image>
+                        </ImageView>
+                        <Text layoutX="46.0" layoutY="18.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Vinyx Concepts is an ICT firm focused on bringing innovative IT Solutions to the common man using the language he understands best. agbajid@gmail.com" wrappingWidth="201.13671875">
+                           <font>
+                              <Font name="System Italic" size="12.0" />
+                           </font>
+                        </Text>
+                     </children>
+                  </AnchorPane>
+               </content>
+            </TitledPane>
+            <TitledPane layoutX="10.0" layoutY="60.0" text="Credits">
+               <content>
+                  <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" style="-fx-background-color: white;">
+                     <children>
+                        <Text layoutX="6.0" layoutY="13.0" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-font-size: 10;" text="Sincere gratitude to Abdulazeez, Muazu, Blessing, Mohammed, David, Maureen, Daniella, Rosemary, Cameo, Daniel, Prince, Rosemary, Gbenga, Abdulrazaq and other family and friends for their support" textAlignment="JUSTIFY" wrappingWidth="238.517578125" />
+                     </children>
+                  </AnchorPane>
+               </content>
+            </TitledPane>
+         </panes>
+      </Accordion>
+      <ImageView fx:id="mailAbout" layoutX="24.0" layoutY="363.0">
+         <image>
+            <Image url="@mail.png" />
+         </image>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </ImageView>
+      <ImageView fx:id="tweetAbout" fitHeight="25.0" fitWidth="25.0" layoutX="28.0" layoutY="396.0">
+         <image>
+            <Image url="@twitter.png" />
+         </image>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </ImageView>
+      <Text layoutX="56.0" layoutY="384.0" strokeType="OUTSIDE" strokeWidth="0.0" text="mugambbo@gmail.com" />
+      <Text layoutX="56.0" layoutY="413.0" strokeType="OUTSIDE" strokeWidth="0.0" text="\@mugambbo" />
+      <ImageView fitHeight="70.0" fitWidth="200.0" layoutY="14.0">
+         <image>
+            <Image url="@coldspot_type.png" />
+         </image>
+      </ImageView>
+   </children>
+</AnchorPane>
